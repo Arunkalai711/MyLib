@@ -11,3 +11,14 @@
 *.lai
 *.la
 *.a
+
+# Solution files
+*.suo
+*.sdf
+*.vcxproj.user
+
+# Compiled Files
+MyLib/Debug/*
+MyLib/Release/*
+Debug/*
+Release/*
