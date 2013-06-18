@@ -14,6 +14,12 @@
     <Filter Include="Path">
       <UniqueIdentifier>{c45aaab6-c5db-4183-a0be-5d23cf6c3073}</UniqueIdentifier>
     </Filter>
+    <Filter Include="stdafx">
+      <UniqueIdentifier>{033d3146-4309-4b8b-9f32-f47aa00c8a97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tstring">
+      <UniqueIdentifier>{15d2bc5e-139e-4285-841c-f4b8c87293aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="File\FileEnumrator.cpp">
@@ -34,6 +40,9 @@
     <ClCompile Include="Path\PathControl.cpp">
       <Filter>Path</Filter>
     </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>stdafx</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="File\FileEnumrator.h">
@@ -53,6 +62,12 @@
     </ClInclude>
     <ClInclude Include="Path\Path.h">
       <Filter>Path</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>stdafx</Filter>
+    </ClInclude>
+    <ClInclude Include="tstring\tstring.h">
+      <Filter>tstring</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
