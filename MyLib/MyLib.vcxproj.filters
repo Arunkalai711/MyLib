@@ -20,6 +20,18 @@
     <Filter Include="tstring">
       <UniqueIdentifier>{15d2bc5e-139e-4285-841c-f4b8c87293aa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Singleton">
+      <UniqueIdentifier>{84d75baf-9f83-4e2f-b8a5-336632e6081b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sync">
+      <UniqueIdentifier>{fee8e53b-e800-4e4d-bd93-a3f416d84326}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph">
+      <UniqueIdentifier>{11bce336-6026-4c1b-9a54-79e74b695550}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="String">
+      <UniqueIdentifier>{d05c7705-fb4f-4edb-b5a4-c25987b8d0f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="File\FileEnumrator.cpp">
@@ -42,6 +54,15 @@
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>stdafx</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\ParamParser.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="File\FileUtil.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="String\StringUtil.cpp">
+      <Filter>String</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -69,5 +90,34 @@
     <ClInclude Include="tstring\tstring.h">
       <Filter>tstring</Filter>
     </ClInclude>
+    <ClInclude Include="Singleton\Singleton.h">
+      <Filter>Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="Sync\CriticalSection.h">
+      <Filter>Sync</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\ParamParser.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\adjacent_list.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\adjacent_matrix.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="File\FileUtil.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="String\StringUtil.h">
+      <Filter>String</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graph\graph.h">
+      <Filter>Graph</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="MyLib設定.txt" />
   </ItemGroup>
 </Project>

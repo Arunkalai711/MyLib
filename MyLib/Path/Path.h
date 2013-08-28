@@ -11,6 +11,7 @@ namespace Path {
 std::tstring append(const std::tstring& src, const std::tstring& appendpath);
 std::tstring append(const std::tstring& src, const TCHAR* appendpath);
 
+std::tstring removeFilespec(const std::tstring& src);
 std::tstring removeExtention(const std::tstring& src);
 std::tstring renameExtention(const std::tstring& src, const std::tstring& extention);
 std::tstring renameExtention(const std::tstring& src, const TCHAR* extention);
@@ -27,6 +28,7 @@ std::wstring filename(const wchar_t* path);
 }
 
 bool isExsist(const std::tstring& path);
+bool isDirectory(const std::tstring& path);
 
 }
 }

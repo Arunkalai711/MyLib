@@ -28,9 +28,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application\ApplicationInfo.cpp" />
+    <ClCompile Include="Application\ParamParser.cpp" />
     <ClCompile Include="Exception\MyException.cpp" />
     <ClCompile Include="File\FileEnumrator.cpp" />
     <ClCompile Include="File\FileManager.cpp" />
+    <ClCompile Include="File\FileUtil.cpp" />
     <ClCompile Include="Path\Path.cpp" />
     <ClCompile Include="Path\PathControl.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -41,16 +43,30 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseMulti|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="String\StringUtil.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\ApplicationInfo.h" />
+    <ClInclude Include="Application\ParamParser.h" />
     <ClInclude Include="Exception\MyException.h" />
     <ClInclude Include="File\FileEnumrator.h" />
     <ClInclude Include="File\FileManager.h" />
+    <ClInclude Include="File\FileUtil.h" />
     <ClInclude Include="File\TextFile_LineReader.h" />
+    <ClInclude Include="Graph\adjacent_list.h" />
+    <ClInclude Include="Graph\adjacent_matrix.h" />
     <ClInclude Include="Path\Path.h" />
+    <ClInclude Include="Singleton\Singleton.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="String\StringUtil.h" />
+    <ClInclude Include="Sync\CriticalSection.h" />
     <ClInclude Include="tstring\tstring.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graph\graph.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="MyLib設定.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C8CE744C-3A9C-421E-BA9A-80699B9823BA}</ProjectGuid>

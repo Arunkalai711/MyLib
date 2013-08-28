@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <string>
 #include <fstream>
 #include <sstream>
@@ -7,6 +8,11 @@
 namespace std {
 
 #ifdef UNICODE
+
+	#define	tcin	wcin
+	#define	tcout	wcout
+	#define	tcerr	wcerr
+	#define	tclog	wclog
 
 	typedef std::wstring		tstring;
 	typedef std::wifstream		tifstream;
@@ -17,6 +23,11 @@ namespace std {
 	typedef std::wstringstream	tstringstream;
 
 #else
+
+	#define	tcin	cin
+	#define	tcout	cout
+	#define	tcerr	cerr
+	#define	tclog	clog
 
 	typedef std::string			tstring;
 	typedef std::ifstream		tifstream;
