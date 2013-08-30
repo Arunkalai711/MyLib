@@ -36,3 +36,6 @@ DebugMulti/*
 ReleaseMulti/*
 DebugStaticMulti/*
 ReleaseStaticMulti/*
+
+# Test Results
+TestResults/*
