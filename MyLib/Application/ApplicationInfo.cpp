@@ -1,14 +1,13 @@
+#include "stdafx.h"
 #include "ApplicationInfo.h"
 
-#include <Windows.h>
-
-std::wstring MyLib::App::modulefilename() {
-	wchar_t filename[1024] = {0};
-	::GetModuleFileNameW(NULL, filename, _countof(filename));
-	return std::wstring(filename);
+std::tstring MyLib::App::modulefilename() {
+	TCHAR filename[1024] = {0};
+	::GetModuleFileName(NULL, filename, _countof(filename));
+	return std::tstring(filename);
 }
 
-std::wstring MyLib::App::modulepath() {
-	std::wstring filename = MyLib::App::modulefilename();
-	return filename.substr(0, filename.find_last_of(L"\\"));
+std::tstring MyLib::App::modulepath() {
+	std::tstring filename = MyLib::App::modulefilename();
+	return filename.substr(0, filename.find_last_of(_T("\\")));
 }

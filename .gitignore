@@ -22,5 +22,17 @@
 # Compiled Files
 */Debug/*
 */Release/*
+*/DebugStatic/*
+*/ReleaseStatic/*
+*/DebugMulti/*
+*/ReleaseMulti/*
+*/DebugStaticMulti/*
+*/ReleaseStaticMulti/*
 Debug/*
 Release/*
+DebugStatic/*
+ReleaseStatic/*
+DebugMulti/*
+ReleaseMulti/*
+DebugStaticMulti/*
+ReleaseStaticMulti/*

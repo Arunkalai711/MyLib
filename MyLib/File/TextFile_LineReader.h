@@ -45,7 +45,7 @@ namespace MyLib {
 				Enm_CC_UTF7
 			};
 		public:
-			explicit CTextFile_LineReader(const wchar_t* strFileName, int nReadFileLen = 4096, int nCharCode = Enm_CC_SJIS):
+			explicit CTextFile_LineReader(LPCTSTR strFileName, int nReadFileLen = 4096, int nCharCode = Enm_CC_SJIS):
 				CFileManager(strFileName, OM_Read), m_LineBuf(), m_CharCode(nCharCode),
 				m_ReadBuf(nReadFileLen / sizeof(FileCharType)), m_pIdxReadBuf(&(*m_ReadBuf.begin())), m_nReadBufLen(0),
 				m_bEOF(false), m_bLFisFirstMode(false),

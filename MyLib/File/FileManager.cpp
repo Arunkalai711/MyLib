@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "FileManager.h"
 
 #include "../Exception/MyException.h"
@@ -6,15 +7,15 @@ using namespace MyLib::File;
 
 CFileManager::CFileManager():
 	m_File(INVALID_HANDLE_VALUE), m_FileName(), m_OpenMode(OM_ReadWrite){}
-CFileManager::CFileManager(const wchar_t* strFileName):
+CFileManager::CFileManager(LPCTSTR strFileName):
 	m_File(INVALID_HANDLE_VALUE), m_FileName(strFileName), m_OpenMode(OM_ReadWrite){}
 CFileManager::CFileManager(unsigned int nOpenMode):
 	m_File(INVALID_HANDLE_VALUE), m_FileName(), m_OpenMode(nOpenMode){}
-CFileManager::CFileManager(const wchar_t* strFileName, unsigned int nOpenMode):
+CFileManager::CFileManager(LPCTSTR strFileName, unsigned int nOpenMode):
 	m_File(INVALID_HANDLE_VALUE), m_FileName(strFileName), m_OpenMode(nOpenMode){}
 CFileManager::~CFileManager(){Close();}
 
-void CFileManager::Open(const wchar_t* strFileName, unsigned int nOpenMode)
+void CFileManager::Open(LPCTSTR strFileName, unsigned int nOpenMode)
 {
 	if(IsOpen())	RAISE_MYEXCEPTION("File Open çœ");
 
@@ -37,7 +38,7 @@ void CFileManager::Open(const wchar_t* strFileName, unsigned int nOpenMode)
 }
 void CFileManager::Close(){if(IsOpen())	::CloseHandle(m_File);}
 
-void CFileManager::SetFileName(const wchar_t* strFileName)
+void CFileManager::SetFileName(LPCTSTR strFileName)
 {
 	if(IsOpen())	RAISE_MYEXCEPTION("File Open çœ");
 	m_FileName = strFileName;
