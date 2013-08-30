@@ -7,32 +7,43 @@ namespace Crypto {
 
 class CCryptoKey {
 public:
-	CCryptoKey() : m_CryptoKey(NULL) {
+	CCryptoKey() : m_cryptoKey(NULL) {
 	}
-	explicit CCryptoKey(HCRYPTKEY cryptoKey) : m_CryptoKey(cryptoKey) {
+	explicit CCryptoKey(HCRYPTKEY cryptoKey) : m_cryptoKey(cryptoKey) {
 	}
 	~CCryptoKey() {
-		this->release();
-	}
-public:
-	void attach(HCRYPTKEY cryptoKey) {
-		this->release();
-		m_CryptoKey = cryptoKey;
-	}
-	void release() {
-		if(m_CryptoKey != NULL) {
-			::CryptDestroyKey(m_CryptoKey);
-			m_CryptoKey = NULL;
-		}
-	}
-	operator HCRYPTKEY() {
-		return m_CryptoKey;
-	}
-	operator HCRYPTKEY*() {
-		return &m_CryptoKey;
+		this->destroy();
 	}
 private:
-	HCRYPTKEY m_CryptoKey;
+	CCryptoKey(const CCryptoKey& copy);
+	CCryptoKey operator=(const CCryptoKey& copy);
+public:
+	void attach(HCRYPTKEY cryptoKey) {
+		this->destroy();
+		m_cryptoKey = cryptoKey;
+	}
+	HCRYPTKEY release() {
+		HCRYPTKEY cryptKey = m_cryptoKey;
+		m_cryptoKey = NULL;
+		return cryptKey;
+	}
+	void destroy() {
+		if(m_cryptoKey != NULL) {
+			::CryptDestroyKey(m_cryptoKey);
+			m_cryptoKey = NULL;
+		}
+	}
+	operator HCRYPTKEY() const {
+		return m_cryptoKey;
+	}
+	operator HCRYPTKEY*() {
+		return &m_cryptoKey;
+	}
+	bool isEnable() const {
+		return (m_cryptoKey != NULL);
+	}
+private:
+	HCRYPTKEY m_cryptoKey;
 };
 
 }
