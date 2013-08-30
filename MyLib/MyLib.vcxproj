@@ -48,6 +48,8 @@
   <ItemGroup>
     <ClInclude Include="Application\ApplicationInfo.h" />
     <ClInclude Include="Application\ParamParser.h" />
+    <ClInclude Include="Crypto\CryptoKey.h" />
+    <ClInclude Include="Crypto\CryptoProvider.h" />
     <ClInclude Include="Exception\MyException.h" />
     <ClInclude Include="File\FileEnumrator.h" />
     <ClInclude Include="File\FileManager.h" />

@@ -32,6 +32,9 @@
     <Filter Include="String">
       <UniqueIdentifier>{d05c7705-fb4f-4edb-b5a4-c25987b8d0f1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Crypto">
+      <UniqueIdentifier>{5a1602dd-1af5-4f9c-9b61-4cce68855bc0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="File\FileEnumrator.cpp">
@@ -110,6 +113,12 @@
     </ClInclude>
     <ClInclude Include="String\StringUtil.h">
       <Filter>String</Filter>
+    </ClInclude>
+    <ClInclude Include="Crypto\CryptoProvider.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="Crypto\CryptoKey.h">
+      <Filter>Crypto</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
