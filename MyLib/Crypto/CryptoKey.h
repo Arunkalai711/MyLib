@@ -2,6 +2,8 @@
 
 #include <wincrypt.h>
 
+#include "../Data/BinaryData.h"
+
 namespace MyLib {
 namespace Crypto {
 
@@ -42,6 +44,12 @@ public:
 	bool isEnable() const {
 		return (m_cryptoKey != NULL);
 	}
+
+public:
+	void setAlgorithm(ALG_ID algid);
+	MyLib::Data::BinaryData encrypto(const MyLib::Data::BinaryData& data);
+	MyLib::Data::BinaryData decrypto(const MyLib::Data::BinaryData& encryptoData);
+
 private:
 	HCRYPTKEY m_cryptoKey;
 };

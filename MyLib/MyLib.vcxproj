@@ -29,6 +29,7 @@
   <ItemGroup>
     <ClCompile Include="Application\ApplicationInfo.cpp" />
     <ClCompile Include="Application\ParamParser.cpp" />
+    <ClCompile Include="Crypto\CryptoKey.cpp" />
     <ClCompile Include="Exception\MyException.cpp" />
     <ClCompile Include="File\FileEnumrator.cpp" />
     <ClCompile Include="File\FileManager.cpp" />
@@ -50,6 +51,7 @@
     <ClInclude Include="Application\ParamParser.h" />
     <ClInclude Include="Crypto\CryptoKey.h" />
     <ClInclude Include="Crypto\CryptoProvider.h" />
+    <ClInclude Include="Data\BinaryData.h" />
     <ClInclude Include="Exception\MyException.h" />
     <ClInclude Include="File\FileEnumrator.h" />
     <ClInclude Include="File\FileManager.h" />

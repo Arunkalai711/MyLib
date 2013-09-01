@@ -35,6 +35,9 @@
     <Filter Include="Crypto">
       <UniqueIdentifier>{5a1602dd-1af5-4f9c-9b61-4cce68855bc0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{3f077e08-b31d-4fb1-b5ce-e6d6068a5ca7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="File\FileEnumrator.cpp">
@@ -66,6 +69,9 @@
     </ClCompile>
     <ClCompile Include="String\StringUtil.cpp">
       <Filter>String</Filter>
+    </ClCompile>
+    <ClCompile Include="Crypto\CryptoKey.cpp">
+      <Filter>Crypto</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +125,9 @@
     </ClInclude>
     <ClInclude Include="Crypto\CryptoKey.h">
       <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\BinaryData.h">
+      <Filter>Data</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
