@@ -10,7 +10,7 @@ void MyLib::Crypto::CCryptoKey::setAlgorithm(ALG_ID algid) {
 }
 
 MyLib::Data::BinaryData MyLib::Crypto::CCryptoKey::encrypto(const MyLib::Data::BinaryData& data) {
-	DWORD encryptoDataLength = 0;
+	DWORD encryptoDataLength = data.size();
     if(!::CryptEncrypt(m_cryptoKey, 0, TRUE, 0, NULL, &encryptoDataLength, data.size())) {
 		std::tcout << _T("encrypto CryptEncrypt(GetLength) err=") << ::GetLastError() << std::endl;
 		return MyLib::Data::BinaryData();
